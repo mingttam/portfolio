@@ -18,7 +18,7 @@ const Footer = () => {
           />
         </div>
         <div className="flex flex-col items-center justify-center text-center mt-10 space-y-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <h1 className="heading lg:max-w-[45vw]">Ready to build something great together? </h1>
+          <h1 className="heading lg:max-w-[80vw]">Ready to build something great together? </h1>
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=mingtam.713@gmail.com"
             target="_blank"
