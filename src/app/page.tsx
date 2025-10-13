@@ -2,9 +2,9 @@ import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
+import TechStacks from "@/components/TechStacks";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
-import { Contact, FolderDot, House, Mail } from "lucide-react";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
         <FloatingNav className="" navItems={navItems} />
         <Hero />
         <Grid />
+        <TechStacks />
         <RecentProjects />
         <Footer />
       </div>
