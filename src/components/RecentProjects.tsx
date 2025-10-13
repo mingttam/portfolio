@@ -6,28 +6,28 @@ import { ExternalLink } from "lucide-react";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20" id="projects">
+    <div className="pt-20" id="projects">
       <h1 className="heading">
         A small selection of {""}
         <span className="text-purple">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center gap-x-24 gap-y-7 mt-10 p-4">
+      <div className="flex flex-wrap items-center justify-center gap-x-6 lg:gap-x-8 xl:gap-x-12 2xl:gap-x-20 gap-y-8 sm:gap-y-16 lg:gap-y-32 mt-10 p-4 w-full">
         {projects.map(({ id, title, des, img, iconLists, link }) => (
           <div
             key={id}
-            className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
+            className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[400px] lg:w-[440px] xl:w-[500px] 2xl:w-[570px] w-[80vw]"
           >
             <PinContainer title={link} href={link}>
-              <div className="relative flex items-center justify-center sm:w-[570px] sm:h-[40vh] h-[30vh] w-[80vw] overflow-hidden mb-10">
-                <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                  <Image src="/bg.png" alt="bg-img" layout="fill" objectFit="cover" />
-                </div>
+              <div className="relative flex items-center justify-center sm:w-[400px] lg:w-[440px] xl:w-[500px] 2xl:w-[570px] w-[80vw] overflow-hidden mb-10">
+                {/* <div className="relative w-full aspect-[570/400] overflow-hidden lg:rounded-3xl bg-[#13162d]">
+                  <Image src="/bg.png" alt="bg-img" fill className="object-cover" />
+                </div> */}
                 <Image
                   src={img}
                   alt={title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="z-10 absolute bottom-0"
+                  width={570}
+                  height={400}
+                  className=" w-full h-auto object-contain"
                 />
               </div>
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">{title}</h1>
@@ -44,9 +44,7 @@ const RecentProjects = () => {
                   ))}
                 </div>
                 <div className="flex justify-center items-center ">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check it out on Github
-                  </p>
+                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">Github</p>
                   <ExternalLink className="ms-3" color="#CBACF9" />
                 </div>
               </div>
