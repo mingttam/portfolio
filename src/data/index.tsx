@@ -7,6 +7,13 @@ export const navItems = [
   { name: "Contact", link: "#contact", icon: <Mail /> },
 ];
 
+export const techStack = [
+  { name: "React", value: 90, icon: "/re.svg" },
+  { name: "Next.js", value: 85, icon: "/next.svg" },
+  { name: "TypeScript", value: 80, icon: "/ts.svg" },
+  { name: "Tailwind CSS", value: 75, icon: "/tail.svg" },
+];
+
 export const gridItems = [
   {
     id: 1,
