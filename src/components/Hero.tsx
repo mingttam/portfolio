@@ -29,19 +29,29 @@ const Hero = () => {
 
         <div className="flex justify-center relative my-20 z-10">
           <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-            <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-              Backgrounds
+            <h2
+              className="uppercase tracking-widest text-5xl text-center text-blue-100 max-w-80"
+              style={{
+                animationName: "wave-animation",
+                animationDuration: "2.5s",
+                animationIterationCount: "infinite",
+                transformOrigin: "70% 70%",
+                display: "inline-block",
+              }}
+            >
+              👋🏼
             </h2>
             <TextGenerateEffect
               className="text-center text-[40px] md:text-5xl lg:text-6xl"
               words="Welcome to my Portfolio"
             />
             <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-              This is a brief introduction to my work and projects.
+              I&apos;m Minh Tâm, a passionate developer crafting web experiences with React and
+              Next.js and aiming to be a full-stack developer in the future.
             </p>
 
-            <a href="">
-              <MagicButton title="See my work" />
+            <a href="#about">
+              <MagicButton title="More about me" />
             </a>
           </div>
         </div>
