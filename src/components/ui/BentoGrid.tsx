@@ -8,7 +8,8 @@ import Lottie from "react-lottie";
 import { useState } from "react";
 import AnimationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
-import { CheckIcon, CopyIcon } from "lucide-react";
+import { CheckIcon, CopyIcon, ExternalLink } from "lucide-react";
+import { resumeLink } from "@/data";
 
 export const BentoGrid = ({
   className,
@@ -41,7 +42,7 @@ export const BentoGridItem = ({
 }: {
   className?: string;
   title?: string;
-  description?: string;
+  description?: string | string[] | { text: string; link: string }[];
   id?: number;
   img?: string;
   imgClassName?: string;
@@ -49,11 +50,18 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const [copied, setCopied] = useState(false);
+  const [viewResume, setViewResume] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("mingtam.713@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleViewResume = () => {
+    window.open(resumeLink, "_blank");
+    setViewResume(true);
+    setTimeout(() => setViewResume(false), 2000);
   };
 
   return (
@@ -68,7 +76,11 @@ export const BentoGridItem = ({
           backgroundColor: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
         }}
       >
-        <div className={`${id === 6 && "flex justify-center"} h-full`}>
+        <div
+          className={`${id === 6 && "flex justify-center"} ${
+            id === 4 && "flex  justify-center"
+          } h-full`}
+        >
           <div className="w-full h-full absolute">
             {img && (
               <Image
@@ -103,12 +115,50 @@ export const BentoGridItem = ({
               titleClassName
             )}
           >
-            <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 dark:text-neutral-300">
-              {description}
-            </div>
-            <div className="mt-2 mb-2 font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 dark:text-neutral-200">
-              {title}
-            </div>
+            {id === 3 ? (
+              <>
+                <div className="font-sans font-normal text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 dark:text-neutral-300">
+                  {typeof description === "string" ? description : ""}
+                </div>
+                <div className="mt-2 mb-2 font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 dark:text-neutral-200">
+                  {title}
+                </div>
+              </>
+            ) : id === 5 ? (
+              <>
+                <div className="mt-2 mb-2 font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 dark:text-neutral-200">
+                  {title}
+                </div>
+                <div className="font-sans font-normal text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 dark:text-neutral-300 flex flex-col gap-3">
+                  {Array.isArray(description) &&
+                    (description as { text: string; link: string }[]).map((cert, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center justify-between gap-2 bg-[#10132E] p-3 rounded-lg"
+                      >
+                        <span className="flex-1">{cert.text}</span>
+                        <a
+                          href={cert.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-shrink-0 p-2 hover:bg-purple/20 rounded-md transition-colors"
+                        >
+                          <ExternalLink size={16} className="text-purple" />
+                        </a>
+                      </div>
+                    ))}
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="mt-2 mb-2 font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 dark:text-neutral-200">
+                  {title}
+                </div>
+                <div className="font-sans font-normal text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 dark:text-neutral-300">
+                  {typeof description === "string" ? description : ""}
+                </div>
+              </>
+            )}
 
             {id === 2 && <GridGlobe />}
 
@@ -137,8 +187,29 @@ export const BentoGridItem = ({
               </div>
             )}
 
+            {id === 4 && (
+              <div className=" mt-3 relative flex justify-center">
+                <div className="absolute -bottom-5 right-0">
+                  <Lottie
+                    options={{
+                      loop: viewResume,
+                      autoplay: viewResume,
+                      animationData: AnimationData,
+                      rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
+                    }}
+                  />
+                </div>
+                <MagicButton
+                  title={"View my Resume"}
+                  icon={<ExternalLink />}
+                  otherClasses="!bg-[#161a31]"
+                  handleClick={handleViewResume}
+                />
+              </div>
+            )}
+
             {id === 6 && (
-              <div className="mt-5 relative">
+              <div className=" mt-3 relative">
                 <div className="absolute -bottom-5 right-0">
                   <Lottie
                     options={{
