@@ -50,7 +50,6 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const [copied, setCopied] = useState(false);
-  const [viewResume, setViewResume] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("mingtam.713@gmail.com");
@@ -60,8 +59,6 @@ export const BentoGridItem = ({
 
   const handleViewResume = () => {
     window.open(resumeLink, "_blank");
-    setViewResume(true);
-    setTimeout(() => setViewResume(false), 2000);
   };
 
   return (
