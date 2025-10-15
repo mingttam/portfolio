@@ -1,10 +1,11 @@
-import { Contact, FolderDot, House, Mail } from "lucide-react";
+import { Contact, FolderDot, House, Layers, Mail } from "lucide-react";
 
 export const navItems = [
-  { name: "About", link: "#about", icon: <House /> },
-  { name: "Skills", link: "#skills", icon: <Contact /> },
-  { name: "Projects", link: "#projects", icon: <FolderDot /> },
-  { name: "Contact", link: "#contact", icon: <Mail /> },
+  { name: "HOME", link: "#home", icon: <House /> },
+  { name: "ABOUT", link: "#about", icon: <Contact /> },
+  { name: "SKILLS", link: "#skills", icon: <Layers /> },
+  { name: "PROJECTS", link: "#projects", icon: <FolderDot /> },
+  { name: "CONTACT", link: "#contact", icon: <Mail /> },
 ];
 
 export const resumeLink = "https://drive.google.com/file/d/1wfAUgfZomR6lEA2sIvXi2T7xi7sfGP8R/view";
@@ -96,35 +97,35 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "Personal Portfolio",
+    des: "A personal portfolio website showcasing skills, projects, and experience to highlight professional growth and expertise.",
+    img: "/portfolio.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg"],
+    link: "https://github.com/mingttam/portfolio",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    title: "Sybau - Online learning platform",
+    des: "An online learning platform where users can purchase and learn courses created by instructors, with all activities managed and monitored by an admin.",
+    img: "/sybau.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/re.svg", "/icons8-spring-boot-50.svg"],
+    link: "https://github.com/mingttam/sybau-education",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    title: "Employee Management System",
+    des: "An Employee Management System where I learned to build custom API endpoints and integrate them with the frontend for seamless data interaction.",
+    img: "/employee.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/icons8-spring-boot-50.svg"],
+    link: "https://github.com/mingttam/employee-management",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    title: "Task Manager",
+    des: "A task manager app to practice frontend and Web API integration, featuring task creation, editing, deletion, filtering, and basic authentication.",
+    img: "/taskmanager.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/next.svg"],
+    link: "https://github.com/mingttam/KTC-Exercises/tree/main/react-taskmanager",
   },
 ];
 
@@ -136,12 +137,12 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/twit.svg",
-    link: "https://twitter.com/minh_tam",
+    img: "/facebook.svg",
+    link: "https://facebook.com/mingttam",
   },
   {
     id: 3,
     img: "/link.svg",
-    link: "https://www.linkedin.com/in/minh-tam-2b4b621b5/",
+    link: "https://www.linkedin.com/in/minh-t%C3%A2m-cao-032009366/",
   },
 ];
