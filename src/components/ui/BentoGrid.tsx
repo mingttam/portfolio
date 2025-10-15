@@ -132,20 +132,17 @@ export const BentoGridItem = ({
                 <div className="font-sans font-normal text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 dark:text-neutral-300 flex flex-col gap-3">
                   {Array.isArray(description) &&
                     (description as { text: string; link: string }[]).map((cert, index) => (
-                      <div
+                      <a
                         key={index}
-                        className="flex items-center justify-between gap-2 bg-[#10132E] p-3 rounded-lg"
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between gap-2 w-fit p-3 rounded-lg underline underline-offset-3 hover:bg-white/20 transition-colors "
                       >
-                        <span className="flex-1">{cert.text}</span>
-                        <a
-                          href={cert.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-shrink-0 p-2 hover:bg-purple/20 rounded-md transition-colors"
-                        >
-                          <ExternalLink size={16} className="text-purple" />
-                        </a>
-                      </div>
+                        <span className="flex-1 flex items-center justify-start gap-2 ">
+                          - {cert.text} <ExternalLink className="h-4 w-4" />
+                        </span>
+                      </a>
                     ))}
                 </div>
               </>
@@ -189,19 +186,10 @@ export const BentoGridItem = ({
 
             {id === 4 && (
               <div className=" mt-3 relative flex justify-center">
-                <div className="absolute -bottom-5 right-0">
-                  <Lottie
-                    options={{
-                      loop: viewResume,
-                      autoplay: viewResume,
-                      animationData: AnimationData,
-                      rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
-                    }}
-                  />
-                </div>
+                <div className="absolute -bottom-5 right-0"></div>
                 <MagicButton
                   title={"View my Resume"}
-                  icon={<ExternalLink />}
+                  icon={<ExternalLink className="h-4 w-4" />}
                   otherClasses="!bg-[#161a31]"
                   handleClick={handleViewResume}
                 />
@@ -222,7 +210,9 @@ export const BentoGridItem = ({
                 </div>
                 <MagicButton
                   title={copied ? "Copied!" : "Copy"}
-                  icon={copied ? <CheckIcon /> : <CopyIcon />}
+                  icon={
+                    copied ? <CheckIcon className="h-4 w-4" /> : <CopyIcon className="h-4 w-4" />
+                  }
                   otherClasses="!bg-[#161a31]"
                   handleClick={handleCopy}
                 />
