@@ -11,14 +11,14 @@ const RecentProjects = () => {
         A small selection of {""}
         <span className="text-purple">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center gap-x-6 lg:gap-x-8 xl:gap-x-12 2xl:gap-x-20 mt-10 p-4 w-full">
+      <div className="flex flex-wrap items-center justify-center gap-x-6 lg:gap-x-8 xl:gap-x-12 2xl:gap-x-20  p-4 w-full">
         {projects.map(({ id, title, des, img, iconLists, link }) => (
           <div
             key={id}
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[400px] lg:w-[440px] xl:w-[500px] 2xl:w-[570px] w-[80vw]"
           >
             <PinContainer title={link} href={link}>
-              <div className="relative flex items-center justify-center sm:w-[400px] lg:w-[440px] xl:w-[500px] 2xl:w-[570px] w-[80vw] overflow-hidden mb-10">
+              <div className="relative flex items-center justify-center sm:w-[400px] lg:w-[440px] xl:w-[500px] 2xl:w-[570px] w-[80vw] overflow-hidden sm:h-[280px] h-[220px] mb-10">
                 {/* <div className="relative w-full aspect-[570/400] overflow-hidden lg:rounded-3xl bg-[#13162d]">
                   <Image src="/bg.png" alt="bg-img" fill className="object-cover" />
                 </div> */}
@@ -27,11 +27,15 @@ const RecentProjects = () => {
                   alt={title}
                   width={570}
                   height={400}
-                  className=" w-full h-auto object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">{title}</h1>
-              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 ">{des}</p>
+              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 min-h-[2rem] lg:min-h-[2.5rem]">
+                {title}
+              </h1>
+              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 min-h-[3rem] lg:min-h-[3.5rem]">
+                {des}
+              </p>
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center space-x-1">
                   {iconLists.map((icon, index) => (
