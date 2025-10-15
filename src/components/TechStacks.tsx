@@ -45,7 +45,9 @@ const TechStacks = () => {
 
   return (
     <div className="px-10 py-20" id="skills" ref={sectionRef}>
-      <h2 className="heading">Tech Stack</h2>
+      <h2 className="heading">
+        <span className="text-purple">Technologies</span> that i&apos;m working on
+      </h2>
       <div className="flex flex-wrap justify-center gap-8 mt-10 max-w-7xl mx-auto">
         {techStack.map(({ name, value, icon }, index) => (
           <div

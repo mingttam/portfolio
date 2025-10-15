@@ -7,13 +7,15 @@ export const navItems = [
   { name: "Contact", link: "#contact", icon: <Mail /> },
 ];
 
-export const resumeLink = "https://drive.google.com/file/d/1VvexL19myoulOOwE-Vpc6Bq3n5AFK3qZ/view";
+export const resumeLink = "https://drive.google.com/file/d/1wfAUgfZomR6lEA2sIvXi2T7xi7sfGP8R/view";
 
 export const techStack = [
-  { name: "React", value: 90, icon: "/re.svg" },
+  { name: "React", value: 85, icon: "/re.svg" },
+  { name: "TypeScript", value: 85, icon: "/ts.svg" },
+  { name: "Tailwind CSS", value: 70, icon: "/tail.svg" },
   { name: "Next.js", value: 85, icon: "/next.svg" },
-  { name: "TypeScript", value: 80, icon: "/ts.svg" },
-  { name: "Tailwind CSS", value: 75, icon: "/tail.svg" },
+  { name: "HTML/CSS/JS", value: 85, icon: "/js.svg" },
+  { name: "Spring Boot", value: 50, icon: "/icons8-spring-boot-50.svg" },
 ];
 
 export const gridItems = [
@@ -65,11 +67,11 @@ export const gridItems = [
     description: [
       {
         text: "THE WEB DEVELOPER - K-Teck College 2025",
-        link: "https://your-certificate-link-1.com",
+        link: "https://drive.google.com/file/d/1wfAUgfZomR6lEA2sIvXi2T7xi7sfGP8R/view",
       },
       {
         text: "English: TOEIC 900 - IIG Vietnam 2025",
-        link: "https://your-certificate-link-2.com",
+        link: "https://drive.google.com/file/d/18bf0Xowh80cOHeQI9xswyB3S1z7iH7tx/view",
       },
     ],
     className: "md:col-span-3 md:row-span-2",
