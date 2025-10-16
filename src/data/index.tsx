@@ -8,7 +8,8 @@ export const navItems = [
   { name: "CONTACT", link: "#contact", icon: <Mail /> },
 ];
 
-export const resumeLink = "https://drive.google.com/file/d/1wfAUgfZomR6lEA2sIvXi2T7xi7sfGP8R/view";
+export const resumeLink =
+  "https://drive.google.com/file/d/1moGzxanX5zf2naNRe8YS-duAHBY9kWtf/view?usp=sharing";
 
 export const techStack = [
   { name: "React", value: 85, icon: "/re.svg" },
