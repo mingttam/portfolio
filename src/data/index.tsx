@@ -144,6 +144,6 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
-    link: "https://www.linkedin.com/in/minh-t%C3%A2m-cao-032009366/",
+    link: "https://www.linkedin.com/in/mingttam",
   },
 ];
